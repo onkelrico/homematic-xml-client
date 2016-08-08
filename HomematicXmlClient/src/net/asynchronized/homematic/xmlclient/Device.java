@@ -80,6 +80,10 @@ public class Device {
         this.deviceType = deviceType;
     }
 
+    public DeviceType getType() {
+        return DeviceType.getByCode(getDeviceType());
+    }
+    
     public Boolean getReadyConfig() {
         return readyConfig;
     }
