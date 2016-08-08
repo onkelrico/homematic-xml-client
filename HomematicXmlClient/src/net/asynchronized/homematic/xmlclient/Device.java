@@ -72,12 +72,16 @@ public class Device {
         this.iface = iface;
     }
 
-    public String getDeviceType() {
+    private String getDeviceType() {
         return deviceType;
     }
 
-    public void setDeviceType(String deviceType) {
+    private void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
+    }
+    
+    public DeviceType getType() {
+        return DeviceType.getByCode(getDeviceType());
     }
 
     public Boolean getReadyConfig() {
